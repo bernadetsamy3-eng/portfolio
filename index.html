@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>برناديت: محتوى مرئي بالذكاء الاصطناعي</title>
+<meta name="description" content="بورتفوليو أعمال برناديت سامي: فيديوهات، إعلانات، وهويات بصرية بالذكاء الاصطناعي." />
+<meta property="og:title" content="برناديت: محتوى مرئي بالذكاء الاصطناعي" />
+<meta property="og:description" content="بورتفوليو أعمال برناديت سامي: فيديوهات، إعلانات، وهويات بصرية بالذكاء الاصطناعي." />
+<meta property="og:image" content="https://bernadetsamy3-eng.github.io/portfolio/cover.jpg" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="logo-circle.png" />
+<style>/* Base styles reimplementing the Instinct Files components as plain CSS. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #F8F1E8; }
+img { max-width: 100%; }
+
+.file-card {
+  position: relative;
+  max-width: 780px;
+  margin: 40px auto;
+  padding: 40px 28px 32px;
+  border-radius: 28px;
+  font-family: 'Montserrat', 'IBM Plex Sans Arabic', sans-serif;
+  color: #503B37;
+  line-height: 1.8;
+}
+@media (max-width: 640px) { .file-card { margin: 16px 12px; padding: 28px 16px 24px; } }
+
+.file-header { margin-block-end: 8px; }
+.file-fact { display: inline-block; font-size: 13px; letter-spacing: 0.06em; color: #6B544E; font-family: 'Montserrat', sans-serif; margin-block-end: 6px; }
+.file-title { font-family: 'Alexandria', 'Montserrat', sans-serif; font-weight: 700; font-size: 34px; line-height: 1.35; margin: 0 0 14px; color: #503B37; }
+@media (max-width: 640px) { .file-title { font-size: 26px; } }
+.file-intro { margin: 0; font-size: 16px; line-height: 2; color: rgba(80, 59, 55, 0.74); }
+
+.file-group, .file-photos { font-size: 16px; }
+.file-group-label { display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; color: #6B544E; font-family: 'Montserrat', sans-serif; margin-block-end: 4px; }
+.file-group-heading { font-family: 'Alexandria', 'Montserrat', sans-serif; font-weight: 700; font-size: 23px; color: #503B37; margin: 0; line-height: 1.7; }
+.file-p { margin: 10px 0 0; line-height: 2; color: rgba(80, 59, 55, 0.74); }
+
+.file-photos-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-block-start: 12px; }
+.file-photos-grid.multi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 700px) { .file-photos-grid.multi { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.file-photos-grid img { display: block; width: 100%; border-radius: 18px; border: 1px solid rgba(80, 59, 55, 0.1); }
+.file-photos-grid.single img { height: auto; }
+.file-photos-grid.multi img { aspect-ratio: 1/1; object-fit: contain; background: #FBF4EC; height: auto; }
+.file-photos-grid.contain img { aspect-ratio: 4/5; object-fit: contain; background: #FBF4EC; }
+
+.file-facts { margin: 14px 0 0; padding: 0; list-style: none; }
+.file-facts li { display: flex; gap: 12px; padding: 10px 2px; border-top: 1px solid rgba(80, 59, 55, 0.1); }
+.file-facts li:first-child { border-top: 0; }
+.file-facts .file-fact-label { font-weight: 600; color: #503B37; min-width: 110px; }
+.file-facts .file-fact-value { color: rgba(80, 59, 55, 0.74); }
+
+.file-rows { margin: 12px 0 0; padding: 0; list-style: none; counter-reset: rows; }
+.file-row { display: flex; gap: 14px; align-items: baseline; padding: 12px 2px; border-top: 1px solid rgba(80, 59, 55, 0.1); }
+.file-row:first-child { border-top: 0; }
+.file-row-slot { font-weight: 700; color: #503B37; font-family: 'Alexandria', sans-serif; }
+.file-row-name { font-weight: 600; color: #503B37; }
+.file-row-detail { display: block; line-height: 2; color: rgba(80, 59, 55, 0.74); font-size: 15px; }
+
+.file-steps { margin: 12px 0 0; padding: 0; list-style: none; counter-reset: steps; }
+.file-steps li { counter-increment: steps; display: flex; gap: 12px; padding: 10px 2px; border-top: 1px solid rgba(80, 59, 55, 0.1); line-height: 2; color: rgba(80, 59, 55, 0.74); }
+.file-steps li:first-child { border-top: 0; }
+.file-steps li::before { content: counter(steps); font-weight: 700; color: #503B37; font-family: 'Alexandria', sans-serif; }
+
+.file-button {
+  display: inline-block; padding: 14px 34px; border-radius: 999px;
+  font-family: 'Alexandria', sans-serif; font-weight: 700; font-size: 17px;
+  color: #fff; text-decoration: none; border: 1px solid transparent; cursor: pointer;
+}
+
+.file-callout { padding: 18px 20px; border: 1px solid; border-radius: 14px; margin-block-start: 12px; }
+.file-callout-title { font-family: 'Alexandria', sans-serif; font-weight: 700; font-size: 18px; color: #503B37; margin: 0 0 6px; }
+.file-callout p { margin: 0; line-height: 2; color: rgba(80, 59, 55, 0.74); }
+
+.file-closing { margin-block-start: 8px; font-size: 13.5px; line-height: 1.9; color: rgba(80, 59, 55, 0.52); }
+@media (min-width: 700px) { .file-photos-grid.multi.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+<style>@font-face{font-family:'Alexandria';font-weight:700;font-style:normal;font-display:swap;src:url('alexandria-700.ttf') format('truetype');}
+@font-face{font-family:'IBM Plex Sans Arabic';font-weight:400;font-style:normal;font-display:swap;src:url('ibmplexsansarabic-400.ttf') format('truetype');}
+@font-face{font-family:'IBM Plex Sans Arabic';font-weight:600;font-style:normal;font-display:swap;src:url('ibmplexsansarabic-600.ttf') format('truetype');}
+@font-face{font-family:'Playfair Display';font-weight:500;font-style:normal;font-display:swap;src:url('playfairdisplay-500.ttf') format('truetype');}
+@font-face{font-family:'Playfair Display';font-weight:700;font-style:normal;font-display:swap;src:url('playfairdisplay-700.ttf') format('truetype');}
+@font-face{font-family:'Montserrat';font-weight:400;font-style:normal;font-display:swap;src:url('montserrat-400.ttf') format('truetype');}
+@font-face{font-family:'Montserrat';font-weight:600;font-style:normal;font-display:swap;src:url('montserrat-600.ttf') format('truetype');}
+html, body, #root { margin: 0; min-height: 100%; }
+body { background: #F8F1E8; }
+.pf-shell { position: relative; min-height: 600px; overflow: hidden; background: radial-gradient(circle at 50% -10%, rgba(200, 120, 98, 0.25), transparent 42%), radial-gradient(circle at 12% 88%, rgba(232, 185, 168, 0.26), transparent 36%), radial-gradient(circle at 88% 76%, rgba(80, 59, 55, 0.06), transparent 32%), #F8F1E8; }
+.pf-shell::before { content: ''; position: absolute; inset: -20%; background: radial-gradient(circle at 22% 18%, rgba(200, 120, 98, 0.26), transparent 38%), radial-gradient(circle at 80% 26%, rgba(232, 185, 168, 0.3), transparent 40%), radial-gradient(circle at 28% 84%, rgba(80, 59, 55, 0.1), transparent 38%), radial-gradient(circle at 62% 62%, rgba(200, 120, 98, 0.14), transparent 34%); animation: pfDrift 26s ease-in-out infinite alternate; }
+.pf-shell > * { position: relative; z-index: 1; }
+.pf-shell > .file-card { box-shadow: 0 24px 70px rgba(80, 59, 55, 0.18) !important; }
+.pf-motion { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
+.pf-motion-static { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(circle at 12% 9%, rgba(200, 120, 98, 0.22), transparent 11%), radial-gradient(circle at 86% 20%, rgba(232, 185, 168, 0.24), transparent 9%), radial-gradient(circle at 78% 64%, rgba(232, 185, 168, 0.18), transparent 13%), radial-gradient(circle at 16% 84%, rgba(200, 120, 98, 0.18), transparent 11%); }
+
+.pf-hero { margin-block: 4px 20px; text-align: center; }
+.pf-hero img { width: min(560px, 100%); height: auto; aspect-ratio: 1302/1208; border-radius: 26px; object-fit: cover; border: 3px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, conic-gradient(from 210deg, #C87862, #E8B9A8, #503B37, #E8B9A8, #C87862) border-box; box-shadow: 0 0 0 6px rgba(200, 120, 98, 0.16), 0 12px 34px rgba(80, 59, 55, 0.3); animation: pfHeroFloat 5s ease-in-out infinite alternate; }
+
+.pf-slogan { margin-block: 0 24px; margin-inline: auto; max-width: 640px; padding-block: 6px 2px; text-align: center; }
+.pf-slogan-mark { display: inline-block; color: #503B37; font-size: 14px; line-height: 1; text-shadow: 0 0 14px rgba(200, 120, 98, 0.65); animation: pfTwinkle 1.8s ease-in-out infinite alternate; }
+.pf-slogan-text { margin-block: 4px 0; font-family: 'Alexandria', serif; font-weight: 600; font-size: 30px; line-height: 1.6; background: linear-gradient(100deg, #503B37, #C87862 50%, #503B37); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: pfShimmer 4.5s linear infinite; }
+.pf-slogan-text strong, .pf-slogan-text span { display: block; font-weight: 600; }
+
+.pf-brand { margin-block: 0 24px; display: flex; justify-content: center; }
+.pf-badge { width: 126px; height: 126px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #FFFFFF; box-shadow: 0 10px 28px rgba(80, 59, 55, 0.22); }
+.pf-badge img { width: 118px; height: auto; display: block; border-radius: 50%; }
+
+.pf-cta { margin-block: 0 28px; text-align: center; }
+
+.pf-ornament { position: relative; display: flex; align-items: center; gap: 14px; width: min(460px, 92%); margin: 30px auto; padding-block: 6px; }
+.pf-ornament::before { display: none; }
+.pf-ornament-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(200, 120, 98, 0.85), rgba(80, 59, 55, 0.6), rgba(232, 185, 168, 0.85), transparent); }
+.pf-ornament-star { color: #503B37; font-size: 13px; line-height: 1; text-shadow: 0 0 12px rgba(200, 120, 98, 0.6); animation: pfTwinkle 2.4s ease-in-out infinite alternate; }
+.pf-page-footer { margin: 18px 0 0; padding-block: 12px; color: rgba(80, 59, 55, 0.6); font-size: 13px; line-height: 20px; text-align: center; font-family: 'Alexandria', serif; }
+
+.pf-videos { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.pf-video-card { margin: 0; min-width: 0; }
+.pf-video { display: block; width: 100%; max-height: 520px; aspect-ratio: 478/850; object-fit: contain; background: #F1E4D6; border: 1px solid rgba(80, 59, 55, 0.08); border-radius: 24px; }
+.pf-video-card figcaption { margin-block-start: 12px; }
+.pf-video-card figcaption strong { font-weight: 600; color: #503B37; }
+.pf-video-card figcaption p { margin-block: 4px 0; color: var(--ds-ink-2); }
+@media (min-width: 650px) { .pf-videos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+@keyframes pfTwinkle { from { opacity: 0.45; transform: scale(0.86); } to { opacity: 1; transform: scale(1.08); } }
+@keyframes pfHeroFloat { from { transform: translateY(0); box-shadow: 0 0 0 6px rgba(200, 120, 98, 0.16), 0 12px 34px rgba(80, 59, 55, 0.3); } to { transform: translateY(-6px); box-shadow: 0 0 0 9px rgba(200, 120, 98, 0.22), 0 18px 44px rgba(80, 59, 55, 0.38); } }
+@keyframes pfShimmer { from { background-position: 0% 0; } to { background-position: -220% 0; } }
+@keyframes pfDrift { from { transform: translate3d(-3%, -2%, 0) scale(1); } to { transform: translate3d(3%, 3%, 0) scale(1.07); } }
+@media (prefers-reduced-motion: reduce) { .pf-slogan-mark, .pf-slogan-text, .pf-hero img, .pf-shell::before, .pf-ornament-star, .file-card .file-group::after, .file-card .file-photos::after { animation: none !important; } .pf-slogan-text { background: none; -webkit-text-fill-color: currentColor; color: #503B37; } }
+
+.file-card {
+  --ds-ink: #503B37;
+  --ds-ink-2: rgba(80, 59, 55, 0.74);
+  --ds-ink-3: rgba(80, 59, 55, 0.52);
+  --ds-border: rgba(80, 59, 55, 0.14);
+  background: rgba(255, 255, 255, 0.66) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(80, 59, 55, 0.1) !important;
+}
+.file-card .file-group-label { color: #503B37; }
+.file-card .file-group, .file-card .file-photos {
+  position: relative;
+  background: linear-gradient(180deg, rgba(200, 120, 98, 0.09), rgba(232, 185, 168, 0.06) 110px, rgba(255, 255, 255, 0) 210px), rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(80, 59, 55, 0.12);
+  border-radius: 20px;
+  padding: 24px 22px 20px;
+  margin-block: 18px;
+  box-shadow: 0 10px 28px rgba(80, 59, 55, 0.14);
+}
+.file-card .file-group::before, .file-card .file-photos::before {
+  content: ''; position: absolute; top: 0; left: 20px; right: 20px; height: 3px; border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, transparent, rgba(200, 120, 98, 0.7) 20%, rgba(232, 185, 168, 0.75) 42%, rgba(80, 59, 55, 0.65) 50%, rgba(232, 185, 168, 0.75) 58%, rgba(200, 120, 98, 0.7) 80%, transparent);
+}
+.file-card .file-group::after, .file-card .file-photos::after {
+  content: '✦'; position: absolute; top: 12px; inset-inline-end: 16px; font-size: 11px; line-height: 1; color: #503B37; opacity: 0.4; text-shadow: 0 0 10px rgba(200, 120, 98, 0.55); animation: pfTwinkle 2.6s ease-in-out infinite alternate; pointer-events: none;
+}
+.file-card .file-button { background: linear-gradient(135deg, #503B37, #C87862) !important; border-color: transparent !important; color: #ffffff !important; box-shadow: 0 10px 30px rgba(80, 59, 55, 0.35); }
+.file-card .file-callout { background: rgba(232, 185, 168, 0.16); border-color: rgba(80, 59, 55, 0.3) !important; border-radius: 14px; }
+.file-card .file-facts > *, .file-card .file-row, .file-card .file-steps > * { border-color: rgba(80, 59, 55, 0.1) !important; }
+.file-card .file-row-slot, .file-card .file-step-n { color: #503B37; }
+.file-card .file-photo-zoom { border-radius: 18px; }
+.file-card img { border-color: rgba(80, 59, 55, 0.1); }
+
+/* identity: type */
+.pf-shell, .pf-shell .file-card { font-family: 'IBM Plex Sans Arabic', 'Montserrat', sans-serif; }
+.pf-shell .file-card [class*="title"], .pf-shell .file-card h1, .pf-shell .file-card h2, .pf-shell .file-card h3, .pf-shell .file-card [class*="heading"] { font-family: 'Alexandria', 'IBM Plex Sans Arabic', sans-serif !important; font-weight: 700 !important; letter-spacing: 0 !important; color: #503B37; }
+.pf-slogan-text { font-family: 'Alexandria', sans-serif; }
+.pf-slogan-line { display: block; width: 56px; height: 2px; margin: 0 auto 6px; border-radius: 2px; background: linear-gradient(90deg, #C87862, #A5AA91); }
+.pf-tagline, .pf-page-tagline { display: block; margin: 8px 0 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 17px; letter-spacing: 0.02em; color: #6B544E; }
+.pf-page-tagline { margin-top: 4px; font-size: 13px; }
+.pf-ornament-star { width: 8px; height: 8px; border-radius: 50%; background: #A5AA91; box-shadow: 0 0 0 4px rgba(165, 170, 145, 0.18); }
+.pf-ornament-line { background: linear-gradient(90deg, transparent, rgba(200, 120, 98, 0.9), transparent); }
+.pf-shell .file-card .file-group-label { color: #6B544E; font-family: 'Montserrat', sans-serif; letter-spacing: 0.06em; }
+.file-card .file-group::after, .file-card .file-photos::after { display: none; }
+.file-card .file-group::before, .file-card .file-photos::before { background: linear-gradient(90deg, transparent, rgba(200, 120, 98, 0.8) 30%, rgba(232, 185, 168, 0.9) 70%, transparent); }
+.file-card .file-button { background: #503B37 !important; box-shadow: 0 10px 28px rgba(80, 59, 55, 0.28); font-family: 'Alexandria', sans-serif; }
+.file-card .file-callout { background: rgba(232, 185, 168, 0.28); border-color: rgba(200, 120, 98, 0.6) !important; }
+.file-card .file-group, .file-card .file-photos { padding: 28px 22px 24px; margin-block: 24px; background: linear-gradient(180deg, rgba(232, 185, 168, 0.2), rgba(255,255,255,0) 160px), rgba(255, 255, 255, 0.88); }
+.pf-shell { background: radial-gradient(circle at 50% -10%, rgba(200, 120, 98, 0.25), transparent 42%), radial-gradient(circle at 12% 88%, rgba(232, 185, 168, 0.4), transparent 36%), radial-gradient(circle at 88% 76%, rgba(165, 170, 145, 0.08), transparent 30%), #F8F1E8; }
+.pf-shell .file-card, .pf-shell .file-card * { font-family: 'Montserrat', 'IBM Plex Sans Arabic', sans-serif; }
+.pf-shell .file-card .file-title, .pf-shell .file-card .file-group-heading, .pf-shell .file-card .file-strong, .pf-shell .file-card .file-button, .pf-shell .file-card .file-callout-title { font-family: 'Alexandria', 'Montserrat', sans-serif !important; }
+.pf-shell .file-card .file-p, .pf-shell .file-card .file-intro, .pf-shell .file-card .file-row-detail { line-height: 2; }
+.pf-slogan-text { font-size: 24px; line-height: 1.7; }
+@media (min-width: 700px) { .pf-slogan-text { font-size: 32px; } }
+.pf-badge { width: 168px; height: 168px; } .pf-badge img { width: 158px; }
+.pf-hero { margin-block: 12px 28px; }
+
+.pf-shell::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 1; background-image: url('grain.png'); }
+.pf-wave { display: block; width: min(420px, 90%); height: 26px; margin: 0 auto; overflow: visible; }
+.pf-wave path { fill: none; stroke: #C87862; stroke-width: 1.2; stroke-linecap: round; }
+.pf-wave .pf-sp { fill: #A5AA91; stroke: none; }
+.pf-wave .pf-lf { fill: none; stroke: #A5AA91; stroke-width: 1.3; }
+.pf-ornament { padding-block: 0; }
+.pf-ornament-line, .pf-ornament-star { display: none; }
+.pf-shell .file-card .pf-tagline, .pf-shell .pf-page-footer .pf-page-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; }
+.pf-shell .file-card, .pf-shell .file-card * { font-family: 'Montserrat', 'IBM Plex Sans Arabic', sans-serif; }
+.pf-shell .file-card .pf-tagline { font-family: 'Playfair Display', serif; }
+.pf-shell .file-card .file-title, .pf-shell .file-card .file-group-heading, .pf-shell .file-card .file-strong, .pf-shell .file-card .file-button, .pf-shell .file-card .pf-slogan-text, .pf-shell .file-card .pf-slogan-text * { font-family: 'Alexandria', 'Montserrat', sans-serif !important; }
+.pf-shell { background: radial-gradient(circle at 50% -10%, rgba(200,120,98,.16), transparent 42%), radial-gradient(circle at 12% 88%, rgba(232,185,168,.22), transparent 36%), #F8F1E8; }
+.file-card { background: rgba(255,252,247,.7) !important; }
+.file-card .file-group, .file-card .file-photos { background: linear-gradient(180deg, rgba(232,185,168,.14), rgba(255,255,255,0) 160px), rgba(255,252,247,.9); }
+.pf-page-footer { font-family: 'Alexandria', sans-serif; }
+
+/* Room for every section heading, including wrapped Arabic lines. */
+.pf-shell .file-card .file-group-heading { line-height: 1.7; margin-block: 12px 20px; }
+/* Let the page title breathe when it wraps on phones. */
+.pf-shell .file-card .file-title { line-height: 1.35; }
+</style>
+</head>
+<body>
+<div class="pf-shell">
+<canvas class="pf-motion" id="pf-motion" aria-hidden="true"></canvas>
+<div class="pf-motion-static" aria-hidden="true"></div>
+<main class="file-card">
+  <header class="file-header">
+    <span class="file-fact">بورتفوليو أعمال</span>
+    <h1 class="file-title">برناديت: محتوى مرئي بالذكاء الاصطناعي</h1>
+    <p class="file-intro">أنا برناديت، بعمل محتوى مرئي بالذكاء الاصطناعي: فيديوهات، إعلانات، وهويات بصرية. تحت هتلاقي نماذج من شغلي.</p>
+  </header>
+
+  <div class="pf-hero"><img src="bernadette.jpg" alt="صورة برناديت سامي" /></div>
+
+  <div class="pf-slogan" role="img" aria-label="خيالك قادر على تغيير واقعك.. فآمن به! Human Ideas. Infinite Possibilities.">
+    <span class="pf-slogan-line" aria-hidden="true"></span>
+    <p class="pf-slogan-text" aria-hidden="true"><strong>خيالك قادر على تغيير واقعك..</strong><span>فآمن به!</span></p>
+    <p class="pf-tagline" dir="ltr" aria-hidden="true">Human Ideas. Infinite Possibilities.</p>
+  </div>
+
+  <div class="pf-cta"><a class="file-button" href="https://wa.me/201020776369?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B+%D8%A8%D8%B1%D9%86%D8%A7%D8%AF%D9%8A%D8%AA%D8%8C+%D8%B4%D9%81%D8%AA+%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%AA%D9%81%D9%88%D9%84%D9%8A%D9%88+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D9%83%D9%84%D9%85%D9%83+%D8%B9%D9%86+%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A">اطلب شغلك من هنا</a></div>
+
+  <div class="pf-brand"><div class="pf-badge" role="img" aria-label="شعار برناديت سامي"><img src="logo-circle.png" alt="شعار برناديت سامي" /></div></div>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-photos" aria-label="واجهة محل شفشقولة">
+    <div class="file-photos-grid single"><img src="shaf-reveal.jpg" alt="واجهة محل شفشقولة في سوق مصري، عليها لافتة انتعاش مصر الأصلي وقلة فخار كبيرة" /></div>
+  </section>
+
+  <div class="pf-story">
+  <section class="file-group">
+    <span class="file-group-label">القصة</span>
+    <h2 class="file-group-heading">شفشقولة: براند كامل من الخيال</h2>
+    <p class="file-p">عصاير طبيعية في قلل فخار زي زمان، بهوية مصرية أصيلة. براند وهمي من خيالي، اتنفذ كله بالـ AI عشان تشوف أقدر أعمل إيه.</p>
+    <ul class="file-facts">
+      <li><span class="file-fact-label">الاسم واللوجو</span><span class="file-fact-value">شفشقولة، بخط عربي مبهج وروح شعبية</span></li>
+      <li><span class="file-fact-label">لوحة الألوان</span><span class="file-fact-value">برتقالي العصير، أخضر النعناع، ولون الفخار</span></li>
+      <li><span class="file-fact-label">العبوات</span><span class="file-fact-value">قلل فخار وأكواب بطابع السوق البلدي</span></li>
+      <li><span class="file-fact-label">واجهة المحل</span><span class="file-fact-value">تصميم كشك كامل جوه سوق مصري</span></li>
+    </ul>
+  </section>
+  </div>
+
+  <section class="file-photos" aria-label="هوية شفشقولة">
+    <div class="file-photos-grid single"><img src="shaf-board.jpg" alt="بورد هوية شفشقولة: اللوجو ولوحة الألوان والخطوط والباترن والمنيو واليونيفورم والعبوات" /></div>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">الحملة</span>
+    <h2 class="file-group-heading">إعلانات شفشقولة</h2>
+    <p class="file-p">٤ إعلانات لنفس البراند بروح واحدة: المنتج، التجربة، اللمة، والهدية.</p>
+  </section>
+
+  <section class="file-photos" aria-label="إعلانات شفشقولة">
+    <div class="file-photos-grid multi four">
+      <img src="shaf-ad-ready.jpg" alt="إعلان شفشقولة: قولة جاهزة، قلة فخار بتصب العصير مع كوب على صينية خشبية في قهوة بلدي" />
+      <img src="shaf-ad-pour.jpg" alt="إعلان شفشقولة: تجربة مصرية أصيلة، قلة فخار بتصب العصير في قولة صغيرة" />
+      <img src="shaf-ad-gathering.jpg" alt="إعلان شفشقولة: لمة الأحباب، مجموعة شباب بيشربوا العصير قدام الكشك المضيء" />
+      <img src="shaf-ad-gift.jpg" alt="إعلان شفشقولة: هديتك المثالية، طقم قلل فخار هدية مع شنطة ومريلة عليها اللوجو" />
+    </div>
+  </section>
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">الفيديوهات</span>
+    <h2 class="file-group-heading">أفكار بتتحرك</h2>
+    <p class="file-p">شغّل أي فيديو بالصوت.</p>
+    <div class="pf-videos">
+      <figure class="pf-video-card"><video class="pf-video" src="palmhills.mp4" poster="palmhills-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="إعلان عقاري"></video><figcaption><strong>إعلان عقاري</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="tesla.mp4" poster="tesla-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="خيال وحركة"></video><figcaption><strong>خيال وحركة</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="heritage.mp4" poster="heritage-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="مشهد سينمائي تراثي"></video><figcaption><strong>مشهد سينمائي تراثي</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="sanboula.mp4" poster="sanboula-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="مقدّمة افتراضية لإعلان متجر"></video><figcaption><strong>مقدّمة افتراضية لإعلان متجر</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="explainer.mp4" poster="explainer-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="شرح بشخصيات ثلاثية الأبعاد"></video><figcaption><strong>شرح بشخصيات ثلاثية الأبعاد</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="lexu1.mp4" poster="lexu1-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="إعلان أدوات ذكاء اصطناعي"></video><figcaption><strong>إعلان أدوات ذكاء اصطناعي</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="lexu2.mp4" poster="lexu2-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="إعلان أدوات ذكاء اصطناعي، اتجاه تاني"></video><figcaption><strong>إعلان أدوات ذكاء اصطناعي، اتجاه تاني</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="kids.mp4" poster="kids-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="إعلان ملابس أطفال"></video><figcaption><strong>إعلان ملابس أطفال</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="selfpromo.mp4" poster="selfpromo-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="شخصية كرتونية بتتكلم"></video><figcaption><strong>شخصية كرتونية بتتكلم</strong></figcaption></figure>
+      <figure class="pf-video-card"><video class="pf-video" src="writer.mp4" poster="writer-poster.jpg" controls playsinline preload="none" dir="ltr" aria-label="قصة: الكتابة من أجل البقاء"></video><figcaption><strong>قصة: الكتابة من أجل البقاء</strong></figcaption></figure>
+    </div>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">نماذج تصميم</span>
+    <h2 class="file-group-heading">أكتر من ستايل، ونفس الاهتمام بالتفاصيل</h2>
+    <p class="file-p">الأعمال دي نماذج لعرض مهاراتي في التصميم وصناعة المحتوى. ظهور أسماء علامات تجارية مش معناه شراكة رسمية أو إنهم عملاء عندي. العروض ومعلومات المنتجات داخل التصميمات جزء من النماذج، مش عروض حالية أو نصيحة طبية.</p>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">هويات بصرية وشعارات</h2>
+    <div class="file-photos-grid multi">
+      <img src="work-44b7efdc.jpg" alt="حرافيش فيش: تطبيقات هوية بصرية" />
+      <img src="work-7fc06956.jpg" alt="حرافيش فيش: شعار" />
+      <img src="work-86a9d657.jpg" alt="حرافيش فيش: لوحة هوية بديلة" />
+      <img src="work-3eda56a9.jpg" alt="شعار تطبيق فور يو لذوي الاحتياجات الخاصة" />
+      <img src="work-22583cb2.jpg" alt="شعار بالخط العربي" />
+      <img src="work-05080569.jpg" alt="سما العقارية: شعار" />
+      <img src="work-706b1cec.jpg" alt="سما العقارية: تطبيق الشعار على بوابة" />
+      <img src="work-09a5d371.jpg" alt="الحضري: شعار متجر" />
+      <img src="work-c0931a90.jpg" alt="الحضري: تصور واجهة متجر" />
+      <img src="work-8432eb56.jpg" alt="ألبير وأبانوب: شعار إكسسوارات ذهب وفضة" />
+    </div>
+  </section>
+
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">هويات تعليمية</h2>
+    <div class="file-photos-grid multi four">
+      <img src="work-3358870a.jpg" alt="نتعلم صح: شعار بشخصيات كرتونية" />
+      <img src="work-1fd276b9.jpg" alt="نتعلم صح: المرحلة الابتدائية" />
+      <img src="work-1d73ddf5.jpg" alt="نتعلم صح: المرحلة الإعدادية" />
+      <img src="work-81ecd735.jpg" alt="نتعلم صح: شعار دائري بشخصيات كرتونية" />
+    </div>
+  </section>
+
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">تصوير منتجات بالذكاء الاصطناعي</h2>
+    <div class="file-photos-grid multi">
+      <img src="work-5d396f94.jpg" alt="عبوة مطهر في مشهد بإضاءة طبيعية" />
+      <img src="work-28131ca4.jpg" alt="لقطة استخدام المطهر على اليدين" />
+      <img src="work-c95b21fa.jpg" alt="العبوة مع اليد في مشهد داخلي" />
+      <img src="work-c2f51dfb.jpg" alt="رش المطهر في ضوء الشمس" />
+      <img src="work-69e9301e.jpg" alt="إعلان العبوة بخلفية دافئة" />
+      <img src="work-939c1121.jpg" alt="ستوري بورد من خمس لقطات للمنتج" />
+      <img src="work-abef391f.jpg" alt="إعلان سماعات آر واحد وعشرين" />
+    </div>
+  </section>
+
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">إعلانات أكل وحلويات</h2>
+    <div class="file-photos-grid multi four">
+      <img src="work-eabcbe6b.jpg" alt="المصححة: إعلان حلوى بخلفية زرقاء" />
+      <img src="work-d5d9f1fc.jpg" alt="المصححة: تكوين دافئ لطبقات الحلوى" />
+      <img src="work-df7a9b3b.jpg" alt="المصححة: العبوة والمنتج" />
+      <img src="work-ac8141ab.jpg" alt="أبو حسن جاد: إعلان مشبك" />
+    </div>
+  </section>
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">إعلانات صيدليات ومنتجات عناية</h2>
+    <div class="file-photos-grid multi">
+      <img src="work-74459401.jpg" alt="صيدليات مسعود: منتج عناية على رخام" />
+      <img src="work-29c4ea1c.jpg" alt="صيدليات مسعود: تصميم عرض لواقي شمس" />
+      <img src="work-48e5fcaa.jpg" alt="صيدليات مسعود: عرض مستحضرات تجميل" />
+      <img src="work-cbbf32a1.jpg" alt="صيدليات مسعود: إعلان واقي شمس" />
+      <img src="work-b0a4f64b.jpg" alt="تصميم كرتوني لمنتجات أطفال" />
+      <img src="work-9ddac2cb.jpg" alt="منشور كرتوني عن منتجات الحساسية" />
+      <img src="work-99c20577.jpg" alt="إعلان مرهم واراديل" />
+    </div>
+  </section>
+
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">تصميمات لمشروعات محلية</h2>
+    <div class="file-photos-grid multi">
+      <img src="work-71b5c02e.jpg" alt="منيو كافيه مومنتس فروم ذا سكاي" />
+      <img src="work-09ca7f58.jpg" alt="إعلان سحور رمضاني" />
+      <img src="work-59ecaab5.jpg" alt="إعلان مزرعة دواجن" />
+      <img src="work-11fc0519.jpg" alt="منشور مستلزمات دراسية" />
+      <img src="work-930cd69f.jpg" alt="إعلان حبوب وعلف دواجن" />
+      <img src="work-88b0d7f2.jpg" alt="مزرعة فرختنا: إعلان منتجات" />
+      <img src="work-76990e44.jpg" alt="إعلان دواجن بلدي في المزرعة" />
+      <img src="work-47b27efe.jpg" alt="إعلان دواجن بلدي وسط الخضرة" />
+      <img src="work-66bc7f20.jpg" alt="منشور عرض لمدارس الفريد" />
+    </div>
+  </section>
+
+  <section class="file-group">
+    <span class="file-group-label">معرض أعمال</span>
+    <h2 class="file-group-heading">أغلفة كتب ومشاهد قصصية</h2>
+    <div class="file-photos-grid multi">
+      <img src="work-7b52953c.jpg" alt="غلاف غرفتي حياة مع قارئة قرب الشباك" />
+      <img src="work-55e6fdd1.jpg" alt="موك أب كتاب مع شمعة على طاولة" />
+      <img src="work-404aa5d1.jpg" alt="مشهد قراءة مع إضاءة دافئة" />
+    </div>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">عن شغلي</span>
+    <h2 class="file-group-heading">من الفكرة للصورة</h2>
+    <section class="file-photos" aria-label="إعلان خدمات برناديت">
+      <div class="file-photos-grid single contain"><img src="promo.jpg" alt="إعلان برناديت سامي: تحويل أفكارك لصورة حية قدامك" /></div>
+    </section>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">الخدمات</span>
+    <h2 class="file-group-heading">اللي أقدر أعمله لمشروعك</h2>
+    <ul class="file-rows">
+      <li class="file-row"><span class="file-row-slot">1</span><span><span class="file-row-name">ريلز وفيديوهات قصيرة</span><span class="file-row-detail">إعلانات فيديو بالـ AI بتوقف السكرول.</span></span></li>
+      <li class="file-row"><span class="file-row-slot">2</span><span><span class="file-row-name">تصميمات وإعلانات بالـ AI</span><span class="file-row-detail">بوستات وإعلانات جاهزة للنشر بروح براندك.</span></span></li>
+      <li class="file-row"><span class="file-row-slot">3</span><span><span class="file-row-name">هوية بصرية كاملة</span><span class="file-row-detail">اسم ولوجو وألوان ونمط موحد، زي شفشقولة.</span></span></li>
+      <li class="file-row"><span class="file-row-slot">4</span><span><span class="file-row-name">خطة محتوى مرئي شهرية</span><span class="file-row-detail">بوستات الشهر متخططة بكابشناتها، وإنت بس تنشر.</span></span></li>
+    </ul>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">طريقة الشغل</span>
+    <h2 class="file-group-heading">إزاي بنشتغل مع بعض</h2>
+    <ol class="file-steps">
+      <li>نتكلم عن مشروعك: إيه اللي بتبيعه، ذوقك إيه، وعايز توصل لمين.</li>
+      <li>أطلعلك تصور أولي: اتجاه بصري واضح بألوان وستايل البراند.</li>
+      <li>نراجع سوا ونعدل لحد ما تحس إن الشغل بيكلم بصوتك.</li>
+      <li>تستلم تصميمات وفيديوهات جاهزة للنشر على فيسبوك وإنستجرام.</li>
+    </ol>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <section class="file-group">
+    <span class="file-group-label">التواصل</span>
+    <h2 class="file-group-heading">عندك مشروع؟</h2>
+    <div class="file-callout">
+      <p class="file-callout-title">خلينا نتكلم</p>
+      <p>ابعتلي رسالة واتساب على 01020776369 وهرد عليك في نفس اليوم 📩</p>
+    </div>
+  </section>
+
+  <div class="pf-ornament" aria-hidden="true">
+    <svg class="pf-wave" viewBox="0 0 420 26" preserveAspectRatio="none">
+      <path d="M0 13 C 35 0, 70 26, 105 13 S 175 0, 210 13" />
+      <path d="M210 13 C 245 26, 280 0, 315 13 S 385 26, 420 13" />
+      <path class="pf-sp" d="M210 5 L212 11 L218 13 L212 15 L210 21 L208 15 L202 13 L208 11 Z" />
+      <path class="pf-lf" d="M240 22 C 246 15, 252 15, 258 20 M246 18 C 245 14, 248 12, 251 12 M252 19 C 253 15, 256 14, 259 15" />
+    </svg>
+  </div>
+
+  <p class="file-closing">نماذج من شغلي في المحتوى المرئي بالذكاء الاصطناعي. شفشقولة براند وهمي من خيالي. آخر تحديث: ٢٠ نوفمبر ٢٠٢٦.</p>
+</main>
+<p class="pf-page-footer" aria-label="خيالك قادر على تغيير واقعك.. فآمن به!">خيالك قادر على تغيير واقعك.. فآمن به!<span class="pf-page-tagline" dir="ltr">Human Ideas. Infinite Possibilities.</span></p>
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById('pf-motion');
+  var ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  var media = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var width = 0, height = 0, raf = 0, last = performance.now();
+  var identity = ['#C87862', '#E8B9A8', '#A5AA91', '#E8B9A8', '#C87862'];
+  var bubbles = [], sparks = [], i;
+  for (i = 0; i < 13; i++) bubbles.push({
+    x: (i * 0.073 + 0.08) % 1, y: (i * 0.181 + 0.05) % 1, r: 26 + (i % 5) * 13,
+    speed: 7 + (i % 6) * 3.5, drift: 3 + (i % 4) * 1.8, phase: i * 0.72,
+    color: identity[i % identity.length]
+  });
+  for (i = 0; i < 34; i++) sparks.push({
+    x: (i * 0.127 + 0.02) % 1, y: (i * 0.197 + 0.03) % 1,
+    size: 1.2 + (i % 3) * 0.55, speed: 10 + (i % 5) * 3, phase: i * 0.31
+  });
+  function resize() {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = canvas.clientWidth; height = canvas.clientHeight;
+    canvas.width = Math.max(1, Math.round(width * dpr));
+    canvas.height = Math.max(1, Math.round(height * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(now) {
+    var t = now / 1000; last = now;
+    ctx.clearRect(0, 0, width, height);
+    for (var bi = 0; bi < bubbles.length; bi++) {
+      var bubble = bubbles[bi];
+      var y = (height + bubble.r * 2) - ((bubble.y * (height + bubble.r * 2) + t * bubble.speed) % (height + bubble.r * 2)) - bubble.r;
+      var x = bubble.x * width + Math.sin(t * 0.75 + bubble.phase) * bubble.drift;
+      var pulse = 0.92 + Math.sin(t * 1.35 + bubble.phase) * 0.08;
+      var radius = bubble.r * pulse;
+      var glow = ctx.createRadialGradient(x, y, radius * 0.08, x, y, radius);
+      glow.addColorStop(0, bubble.color + '3d');
+      glow.addColorStop(0.58, bubble.color + '14');
+      glow.addColorStop(1, bubble.color + '00');
+      ctx.fillStyle = glow;
+      ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2); ctx.fill();
+    }
+    for (var si = 0; si < sparks.length; si++) {
+      var spark = sparks[si];
+      var sy = height - ((spark.y * height + t * spark.speed) % (height + 12)) + 6;
+      var sx = spark.x * width + Math.sin(t * 1.4 + spark.phase) * 2.2;
+      ctx.fillStyle = 'rgba(200, 120, 98, ' + (0.3 + Math.sin(t * 2 + spark.phase) * 0.1) + ')';
+      ctx.beginPath(); ctx.arc(sx, sy, spark.size, 0, Math.PI * 2); ctx.fill();
+    }
+    if (!media.matches) raf = requestAnimationFrame(draw);
+  }
+  function start() { last = performance.now(); cancelAnimationFrame(raf); draw(last); }
+  if (window.ResizeObserver) new ResizeObserver(function () { resize(); draw(performance.now()); }).observe(canvas);
+  if (media.addEventListener) media.addEventListener('change', start);
+  window.addEventListener('resize', function () { resize(); draw(performance.now()); });
+  resize(); start();
+})();
+</script>
+</body>
+</html>
